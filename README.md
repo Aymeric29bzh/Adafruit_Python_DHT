@@ -1,7 +1,21 @@
 Adafruit Python DHT Sensor Library
 ==================================
 
-Python library to read the DHT series of humidity and temperature sensors on a
+Install alert and CanvasJS Dashboard
+------------------------------------
+
+Files for alert and dashboard is in "Add_mrigonnaux" folder. 
+
+The file CanvasJS_Dashboard/index.html must be installed at the root of the web server.
+
+The file Python/DHT22.py must be cron on your server (every hour) :
+```
+0 * * * * python /path_to_the_script/DHT22.py temperature >> /var/www/html/temperature.csv
+0 * * * * python /path_to_the_script/DHT22.py humidity >> /var/www/html/humidity.csv
+0 * * * * python /path_to_the_script/DHT22.py alert
+```
+
+Python library to read the DHT series of humidity and temperature sensors on a 
 Raspberry Pi or Beaglebone Black.
 
 Designed specifically to work with the Adafruit DHT series sensors ---->
